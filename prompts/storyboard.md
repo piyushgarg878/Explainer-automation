@@ -5,3 +5,6 @@ Return JSON matching schemas/storyboard.schema.json. Rules:
 - Conservative, accurate claims only.
 - visual_prompt must be self-contained; no real people or trademarked characters.
 - One shared style_guide used across all scenes.
+- Health content: state only well-established science; use hedged wording ("can", "tends to") where effects vary by person.
+- Never give medical advice, diagnoses, or dosages. Final scene must say this is general education, not medical advice.
+- Visuals: stylized/educational anatomy only; no graphic gore, real patients, or branded food/drug products.

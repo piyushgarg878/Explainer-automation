@@ -51,4 +51,18 @@ data/runs/<YYYY-MM-DD>/
 
 ## Open decisions (from PLAN.md section 11)
 
-Niche, n8n hosting (affects whether FFmpeg stays in the container), TTS provider, Shorts vs long-form, budget, notification channel, publish timing.
+TTS provider, Shorts vs long-form, budget, notification channel, publish timing.
+
+## Decisions made
+
+- **Niche:** health / human body explainers (`CHANNEL_NICHE`).
+- **Hosting:** runs on the owner's PC first via Docker Desktop, then moves to a server. The Docker setup is identical in both; only `.env` and the `data/` volume move. Note a PC that sleeps will miss the daily run.
+- **Channel:** new dedicated YouTube channel (OAuth must be done with the account that owns it; pick that channel at consent time).
+
+## Health-niche safeguards
+
+Health content is sensitive for YouTube policy and for viewers. The pipeline therefore adds:
+1. Prompt rules: well-established science only, hedged wording, no medical advice, closing "general education" line.
+2. Gate step (milestone 2): second LLM pass that lists factual claims and flags risky ones (cures, dosages, absolutes); flagged storyboards fail the run for manual review.
+3. Description always includes a not-medical-advice disclaimer and the AI-generated disclosure.
+4. Week-one manual review of every video before `PRIVACY_STATUS=public`.

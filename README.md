@@ -22,8 +22,12 @@ pip install -r scripts/requirements.txt pytest
 pytest
 ```
 
+## Running on your PC first
+
+Install Docker Desktop, then use the quick start above. The daily schedule only fires while the PC is on and Docker is running. When you move to a server, copy `.env`, `data/` and the n8n volume (or re-import `workflows/*.json` and re-add credentials).
+
 ## Manual setup steps (to be expanded per milestone)
 
 - OpenRouter: create API key, set a credit limit on it.
 - Google Cloud: project, YouTube Data API v3, OAuth consent screen (publish to "In production" so refresh tokens don't expire in 7 days).
-- YouTube: verify the channel (needed for custom thumbnails).
+- YouTube: create the new channel first; authorize OAuth with that channel selected. Verify the channel (needed for custom thumbnails).

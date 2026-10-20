@@ -1,0 +1,11 @@
+{
+  "title": "Why Is the Sky Blue?",
+  "description": "A quick look at Rayleigh scattering. #science #explainer",
+  "tags": ["science", "sky", "physics"],
+  "hook": "Ever wondered why the sky isn't green?",
+  "style_guide": "clean 3D animated explainer style, soft lighting, pastel palette",
+  "scenes": [
+    {"n": 1, "narration": "Sunlight looks white, but it hides every colour.", "visual_prompt": "sunbeam splitting into rainbow", "duration_s": 5},
+    {"n": 2, "narration": "Air molecules scatter blue light the most.", "visual_prompt": "blue light bouncing among particles", "duration_s": 5}
+  ]
+}
